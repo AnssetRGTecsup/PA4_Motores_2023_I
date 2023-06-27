@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
-
+using System;
+using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
     public static SceneController instance { get; private set; }
