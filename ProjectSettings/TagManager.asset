@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Australia
+  - Fire
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Ground
+  - Fire
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1965119067
+    locked: 0
+  - name: UI
+    uniqueID: 1794278607
+    locked: 0
+  - name: Enemy
+    uniqueID: 2994772473
+    locked: 0
+  - name: Fire
+    uniqueID: 4236302513
+    locked: 0
+  - name: Player
+    uniqueID: 99793895
+    locked: 0
+  - name: HUD
+    uniqueID: 2976012633
+    locked: 0
+  - name: GUI
+    uniqueID: 3190726109
+    locked: 0
