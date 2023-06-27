@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MouseController : MonoBehaviour
 {
@@ -8,8 +9,13 @@ public class MouseController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+       
+    }
+    public void MousePosition(InputAction.CallbackContext value)
+    {
+        if (value.started)
         {
+            Debug.Log("hola");
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 100f, hitMask);
             if (hit.collider != null)

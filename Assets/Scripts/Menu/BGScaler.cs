@@ -11,7 +11,7 @@ public class BGScaler : MonoBehaviour
         Vector3 temp = transform.localScale;
         float width = sr.sprite.bounds.size.x;
 
-        float worldScreenHeight = Camera.main.orthographicSize;
+        float worldScreenHeight = Camera.main.orthographicSize*2.01f;
         float worldScreenWidth = worldScreenHeight / Screen.height * Screen.width;
 
         temp.x = worldScreenWidth / width;
