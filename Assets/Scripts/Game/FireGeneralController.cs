@@ -88,7 +88,7 @@ public class FireGeneralController : MonoBehaviour
         string levelData = JsonFileReader.LoadJsonAsResource("levels.json");
         levelDataObject = JsonUtility.FromJson<LevelData>(levelData);
 
-        return levelDataObject.levels[PlayerPrefs.GetInt("level") - 1].fires;
+        return levelDataObject.levels[PlayerPrefs.GetInt("level")].fires;
     }
 
 
