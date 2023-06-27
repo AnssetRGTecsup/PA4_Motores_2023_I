@@ -13,6 +13,6 @@ public class ButtonLevel : MonoBehaviour
     void Start()
     {
         btnLevel = GetComponent<Button>();
-        btnLevel.onClick.AddListener(() => MenuGeneralController.instance.LoadLevel(Level));
+        btnLevel.onClick.AddListener(() => MenuGeneralController.Instance.LoadLevel(Level));
     }
 }
