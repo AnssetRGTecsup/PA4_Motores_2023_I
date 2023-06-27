@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 public class ButtonLevel : MonoBehaviour
 {
     [SerializeField]
@@ -13,6 +14,6 @@ public class ButtonLevel : MonoBehaviour
     void Start()
     {
         btnLevel = GetComponent<Button>();
-        btnLevel.onClick.AddListener(() => MenuGeneralController.instance.LoadLevel(Level));
+        btnLevel.onClick.AddListener(() => MenuGeneralController.Instance.LoadLevel(Level));
     }
 }

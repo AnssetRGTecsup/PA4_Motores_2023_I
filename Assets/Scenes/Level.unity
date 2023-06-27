@@ -31296,7 +31296,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b9a2ed49864d44fa543d73e767fd70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePrefab: {fileID: 0}
+  firePrefab: {fileID: 5363644115615562151, guid: f03988e961ecc494ca014d1eca336715,
+    type: 3}
 --- !u!1 &683020643
 GameObject:
   m_ObjectHideFlags: 0
