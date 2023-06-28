@@ -25,22 +25,19 @@ public class MenuGeneralController : MonoBehaviour
     private Button btnInfinite;
     [SerializeField]
     private Button btnBack;
-
-
-    public static MenuGeneralController Instance { get; set; }
+    public static MenuGeneralController Instance { get; private set; }
 
     private void Awake()
     {
-        if(Instance != null && Instance != this)
-        {
-            Destroy(this);
-        }
-        else
-        {
-            Instance = this;
-        }
+        if (Instance != null && Instance != this) 
+        { 
+            Destroy(this); 
+        } 
+        else 
+        { 
+            Instance = this; 
+        } 
     }
-
     // Start is called before the first frame update
     void Start()
     {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController instance;
@@ -10,7 +11,6 @@ public class PlayerController : MonoBehaviour
     public GameObject ParticleRotator;
     private bool canMove;
     private Vector3 target;
-
     private void Awake()
     {
         if(instance != this && instance != null){
@@ -61,6 +61,13 @@ public class PlayerController : MonoBehaviour
         //setear angulo
         ParticleRotator.transform.eulerAngles = new Vector3(0f, 0f, ang);
         ParticleRotator.GetComponentInChildren<ParticleSystem>().Play();
+        StartCoroutine(AudioClip());
+    }
+    IEnumerator AudioClip()
+    {
+        Debug.Log("HOLA");
         water.Play();
+        yield return new WaitForSeconds(0.5f);
+        water.Stop();
     }
 }
