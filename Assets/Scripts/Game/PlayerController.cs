@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
     public static PlayerController instance;
     private Animator animator;
     private AudioSource water;
-    public GameObject ParticleRotator;
     private bool canMove;
     private Vector3 target;
     public GameObject lineRendererRotator;
@@ -55,14 +54,12 @@ public class PlayerController : MonoBehaviour
 
     public void ShootWater(Vector2 pos)
     {
-        canMove = true ;
+        canMove = false ;
         //calcular angle de jugador a fire
 
         float ang = Mathf.Atan2(pos.y - transform.position.y, pos.x - transform.position.x) * 180 / Mathf.PI;
         print("xd");
         //setear angulo
-        ParticleRotator.transform.eulerAngles = new Vector3(0f, 0f, ang);
-        ParticleRotator.GetComponentInChildren<ParticleSystem>().Play();
         StartCoroutine(AudioClip());
 
         lineRendererRotator.transform.eulerAngles = new Vector3(0f,0f,ang);

@@ -35,8 +35,8 @@ public class FireGeneralController : MonoBehaviour
             Vector3 position = new Vector3(data.x, data.y);
 
             GameObject newFire = Instantiate(firePrefab, position, Quaternion.identity);
-            newFire.GetComponent<FireController>().Life = data.life;
-            newFire.GetComponent<FireController>().despawnTime = data.despawnTime;
+            newFire.GetComponent<FireController1>().Life = data.life;
+            newFire.GetComponent<FireController1>().despawnTime = data.despawnTime;
             newFire.transform.localScale = new Vector3(data.scale, data.scale, 1);
             
             spawnTimers.Add(data.spawnTime);
@@ -119,8 +119,8 @@ public class FireGeneralController : MonoBehaviour
     private void InstantiateRandomFire()
     {
         GameObject newFire = Instantiate(firePrefab, RandomPosition(), Quaternion.identity);
-        newFire.GetComponent<FireController>().Life = Random.Range(2, 10);
-        newFire.GetComponent<FireController>().despawnTime = Random.Range(25, 50);
+        newFire.GetComponent<FireController1>().Life = Random.Range(2, 10);
+        newFire.GetComponent<FireController1>().despawnTime = Random.Range(25, 50);
 
         float scale_t = Random.Range(1, 5);
         newFire.transform.localScale = new Vector3(scale_t, scale_t, 1);

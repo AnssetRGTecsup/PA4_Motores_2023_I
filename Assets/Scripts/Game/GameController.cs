@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameController : MonoBehaviour
 {
@@ -10,11 +11,11 @@ public class GameController : MonoBehaviour
     [SerializeField] private GameObject resultPanel;
     [SerializeField] private Button btnMenu;
     [SerializeField] private Button btnReset;
-    [SerializeField] private Text txtResult;
+    [SerializeField] private TMP_Text txtResult;
 
     [Header("Quote Components")]
     [SerializeField] private GameObject SentencePanel;
-    [SerializeField] private Text sentenceText;
+    [SerializeField] private TMP_Text sentenceText;
     [SerializeField] private Animator sentenceAnimator;
     public QuoteData winQuoteData;
     public QuoteData looseQuoteData;
