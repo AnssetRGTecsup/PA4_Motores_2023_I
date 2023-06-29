@@ -8,6 +8,7 @@ public class SceneController : MonoBehaviour
     [SerializeField] private Canvas canvas;
     [SerializeField] private Animator animator;
     [SerializeField] private string level_to_load;
+    [SerializeField] private LevelsSO levelsSO;
     public Action onFade;
     public Action onLoadScene;
 

@@ -20,6 +20,7 @@ public class MenuGeneralController : MonoBehaviour
     private Button btnExit;
 
     [Header("Play Panel")]
+    [SerializeField] LevelsSO LevelsSO;
     public GameObject PlayPanel;
     [SerializeField]
     private Button btnInfinite;
@@ -75,6 +76,7 @@ public class MenuGeneralController : MonoBehaviour
 
     public void LoadLevel(int level)
     {
+        LevelsSO.Lvl = level;
         PlayerPrefs.SetInt("level", level);
         SceneController.instance.LoadScene("Level");
     }

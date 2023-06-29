@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "LoadLevelSO", menuName = "Levels")]
 public class LevelsSO : ScriptableObject
 {
     public int Lvl;
     public List<Fire> fires;
 
-    public void LLenadoFuego()
+    public List<Fire> LLenadoFuego()
     {
         if (Lvl == 1)
         {
+            fires.Clear();
             Fire fuego1 = new Fire();
             fuego1.life = 10;
             fuego1.scale = 1;
@@ -55,11 +57,12 @@ public class LevelsSO : ScriptableObject
             fuego5.spawnTime = 70;
             fuego5.despawnTime = 30;
             fires.Add(fuego5);
-
+            return fires;
         }
 
-        if (Lvl == 2)
+        else if (Lvl == 2)
         {
+            fires.Clear();
             Fire fuego1 = new Fire();
             fuego1.life = 15;
             fuego1.scale = 1.5f;
@@ -106,20 +109,20 @@ public class LevelsSO : ScriptableObject
             fires.Add(fuego5);
 
             Fire fuego6 = new Fire();
-            fuego5.life = 10;
-            fuego5.scale = 1.5f;
-            fuego5.x = 26.2f;
-            fuego5.y = -12.6f;
-            fuego5.spawnTime = 45;
-            fuego5.despawnTime = 15;
+            fuego6.life = 10;
+            fuego6.scale = 1.5f;
+            fuego6.x = 26.2f;
+            fuego6.y = -12.6f;
+            fuego6.spawnTime = 45;
+            fuego6.despawnTime = 15;
             fires.Add(fuego6);
-
-
+            return fires;
         }
 
 
-        if (Lvl == 2)
+        else if (Lvl == 3)
         {
+            fires.Clear();
             Fire fuego1 = new Fire();
             fuego1.life = 15;
             fuego1.scale = 1.5f;
@@ -166,63 +169,58 @@ public class LevelsSO : ScriptableObject
             fires.Add(fuego5);
 
             Fire fuego6 = new Fire();
-            fuego5.life = 5;
-            fuego5.scale = 0.5f;
+            fuego6.life = 5;
+            fuego6.scale = 0.5f;
             fuego5.x = 26.6f;
-            fuego5.y = 7.3f;
-            fuego5.spawnTime = 40;
-            fuego5.despawnTime = 15;
+            fuego6.y = 7.3f;
+            fuego6.spawnTime = 40;
+            fuego6.despawnTime = 15;
             fires.Add(fuego6);
 
 
             Fire fuego7 = new Fire();
-            fuego5.life = 15;
-            fuego5.scale = 1.5f;
-            fuego5.x = -22.5f;
-            fuego5.y = -8.5f;
-            fuego5.spawnTime = 40;
-            fuego5.despawnTime = 20;
+            fuego7.life = 15;
+            fuego7.scale = 1.5f;
+            fuego7.x = -22.5f;
+            fuego7.y = -8.5f;
+            fuego7.spawnTime = 40;
+            fuego7.despawnTime = 20;
             fires.Add(fuego7);
 
 
             Fire fuego8 = new Fire();
-            fuego5.life = 15;
-            fuego5.scale = 1.5f;
-            fuego5.x = -3.7f;
-            fuego5.y = 17.6f;
-            fuego5.spawnTime = 60;
-            fuego5.despawnTime = 20;
+            fuego8.life = 15;
+            fuego8.scale = 1.5f;
+            fuego8.x = -3.7f;
+            fuego8.y = 17.6f;
+            fuego8.spawnTime = 60;
+            fuego8.despawnTime = 20;
             fires.Add(fuego8);
 
 
             Fire fuego9 = new Fire();
-            fuego5.life = 10;
-            fuego5.scale = 1.0f;
-            fuego5.x = 13.8f;
-            fuego5.y = 13.2f;
-            fuego5.spawnTime = 60;
-            fuego5.despawnTime = 15;
+            fuego9.life = 10;
+            fuego9.scale = 1.0f;
+            fuego9.x = 13.8f;
+            fuego9.y = 13.2f;
+            fuego9.spawnTime = 60;
+            fuego9.despawnTime = 15;
             fires.Add(fuego9);
 
 
             Fire fuego10 = new Fire();
-            fuego5.life = 5;
-            fuego5.scale = 0.5f;
-            fuego5.x = 13.8f;
-            fuego5.y = -6.3f;
-            fuego5.spawnTime = 60;
-            fuego5.despawnTime = 15;
+            fuego10.life = 5;
+            fuego10.scale = 0.5f;
+            fuego10.x = 13.8f;
+            fuego10.y = -6.3f;
+            fuego10.spawnTime = 60;
+            fuego10.despawnTime = 15;
             fires.Add(fuego10);
-
+            return fires;
         }
-
-
-
-
-
-
-
-
-
+        else
+        {
+            return fires;
+        }
     }
 }

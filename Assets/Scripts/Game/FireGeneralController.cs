@@ -15,6 +15,7 @@ public class FireGeneralController : MonoBehaviour
     private float actual_wait_time;
     private int countFires;
     private int totalFires;
+    [SerializeField] LevelsSO LevelsSO;
 
     private void Awake()
     {
@@ -26,7 +27,7 @@ public class FireGeneralController : MonoBehaviour
             return;
         }
 
-        List<Fire> FireData = ReadJson();
+        List<Fire> FireData = LevelsSO.LLenadoFuego();
 
         spawnTimers = new List<float>();
 
