@@ -6,7 +6,7 @@ public class FireGeneralController : MonoBehaviour
 {
     public static FireGeneralController instance;
     [SerializeField] private GameObject firePrefab;
-    private List<GameObject> fireList;
+    private List<GameObject> fireList = new List<GameObject>();
     private LevelData levelDataObject;
     private int level;
     private List<float> spawnTimers;
