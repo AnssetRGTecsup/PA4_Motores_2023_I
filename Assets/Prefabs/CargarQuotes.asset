@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59af01dca02df44cbf68fc465d0269d, type: 3}
+  m_Name: CargarQuotes
+  m_EditorClassIdentifier: 
+  win: 0
+  Quotes:
+  - sentence: Tus esfuerzos no fueron suficientes, con ese incendio murio el 15%
+      de la poblacion de Koalas.
+  - sentence: Al no prevenir la quema de los bosques, miles de animales perdieron
+      su hogar y fuente de alimento.
+  - sentence: Los Quoll del norte entran en peligro de extincion debido a las muertes
+      por los incendios no resueltos.
+  - sentence: "La cantidad de dioxido de carbono liberada es tres veces mayor a la
+      del a\xF1o pasado."
+  - sentence: "Miles de arboles de Acacia perdidos en los incendios forestales, dificultando
+      la producci\xF3n de sus productos medicos."
+  - sentence: El fuego arrazo con los cultivos locales, dejando sin alimento a miles
+      de animales y residentes.
+  - sentence: El dioxido de carbono producido por los incendios inducidos por el
+      calentamiento global ayudan a empeorar esta misma causa.
+  - sentence: Miles de animales mueren sofocados por los gases toxicos, nada de esto
+      hubiese pasado si el calentamiento globar producido por los humanos causara
+      los incendios.

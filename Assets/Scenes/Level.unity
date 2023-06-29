@@ -9283,13 +9283,10 @@ MonoBehaviour:
   btnMenu: {fileID: 426751526}
   btnReset: {fileID: 2024151681}
   txtResult: {fileID: 725592035}
+  quoteDataSO: {fileID: 11400000, guid: d28736d6fa2b4af4393dba54c38399d8, type: 2}
   SentencePanel: {fileID: 486717790}
   sentenceText: {fileID: 662930796}
   sentenceAnimator: {fileID: 486717792}
-  winQuoteData:
-    Quotes: []
-  looseQuoteData:
-    Quotes: []
   GameEnded: 0
 --- !u!4 &1292097119
 Transform:

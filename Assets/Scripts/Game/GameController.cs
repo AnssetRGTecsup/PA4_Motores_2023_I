@@ -14,11 +14,12 @@ public class GameController : MonoBehaviour
     [SerializeField] private TMP_Text txtResult;
 
     [Header("Quote Components")]
+    [SerializeField] private QuotesDataSO quoteDataSO;
     [SerializeField] private GameObject SentencePanel;
     [SerializeField] private TMP_Text sentenceText;
     [SerializeField] private Animator sentenceAnimator;
-    public QuoteData winQuoteData;
-    public QuoteData looseQuoteData;
+    //public QuoteData winQuoteData;
+    //public QuoteData looseQuoteData;
 
     public bool GameEnded;
 
@@ -37,19 +38,28 @@ public class GameController : MonoBehaviour
         btnReset.onClick.AddListener(() => { SceneController.instance.LoadScene(SceneManager.GetActiveScene().name); });
         resultPanel.SetActive(false);
 
-        string WinQuotes = JsonFileReader.LoadJsonAsResource("win.json");
+        /*string WinQuotes = JsonFileReader.LoadJsonAsResource("win.json");
         winQuoteData = JsonUtility.FromJson<QuoteData>(WinQuotes);
 
         string LooseQuotes = JsonFileReader.LoadJsonAsResource("loose.json");
-        looseQuoteData = JsonUtility.FromJson<QuoteData>(LooseQuotes);
+        looseQuoteData = JsonUtility.FromJson<QuoteData>(LooseQuotes);*/
     }
 
     public void FireOutMessage(bool fireExtinguished)
     {
-        
-        int rand_n = Random.Range(0, winQuoteData.Quotes.Count);
-        sentenceText.text = fireExtinguished ? 
-                            winQuoteData.Quotes[rand_n].sentence : looseQuoteData.Quotes[rand_n].sentence;
+        if (fireExtinguished)
+        {
+            quoteDataSO.win = true;
+            quoteDataSO.Quotes = quoteDataSO.UsarQuotes();
+        }
+        else
+        {
+            quoteDataSO.win = false;
+            quoteDataSO.Quotes = quoteDataSO.UsarQuotes();
+        }
+        int rand_n = Random.Range(0, quoteDataSO.Quotes.Count);
+        sentenceText.text = fireExtinguished ?
+                            quoteDataSO.Quotes[rand_n].sentence : quoteDataSO.Quotes[rand_n].sentence;
 
         sentenceAnimator.Play("QuoteEnter");
 
