@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     public GameObject ParticleRotator;
     private bool canMove;
     private Vector3 target;
+    public GameObject lineRendererRotator;
+
     private void Awake()
     {
         if(instance != this && instance != null){
@@ -53,21 +55,32 @@ public class PlayerController : MonoBehaviour
 
     public void ShootWater(Vector2 pos)
     {
-        canMove = false;
+        canMove = true ;
         //calcular angle de jugador a fire
 
         float ang = Mathf.Atan2(pos.y - transform.position.y, pos.x - transform.position.x) * 180 / Mathf.PI;
-
+        print("xd");
         //setear angulo
         ParticleRotator.transform.eulerAngles = new Vector3(0f, 0f, ang);
         ParticleRotator.GetComponentInChildren<ParticleSystem>().Play();
         StartCoroutine(AudioClip());
+
+        lineRendererRotator.transform.eulerAngles = new Vector3(0f,0f,ang);
+        lineRendererRotator.SetActive(true);
+        StartCoroutine(SentenceOut());
     }
+
     IEnumerator AudioClip()
     {
         Debug.Log("HOLA");
         water.Play();
         yield return new WaitForSeconds(0.5f);
         water.Stop();
+    }
+    
+    IEnumerator SentenceOut()
+    {
+        yield return new WaitForSeconds(0.5f);
+        lineRendererRotator.SetActive(false);
     }
 }
