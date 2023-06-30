@@ -58,7 +58,6 @@ public class PlayerController : MonoBehaviour
         //calcular angle de jugador a fire
 
         float ang = Mathf.Atan2(pos.y - transform.position.y, pos.x - transform.position.x) * 180 / Mathf.PI;
-        print("xd");
         //setear angulo
         StartCoroutine(AudioClip());
 
@@ -69,7 +68,6 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator AudioClip()
     {
-        Debug.Log("HOLA");
         water.Play();
         yield return new WaitForSeconds(0.5f);
         water.Stop();

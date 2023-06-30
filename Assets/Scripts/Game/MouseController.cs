@@ -15,7 +15,6 @@ public class MouseController : MonoBehaviour
     {
         if (value.started)
         {
-            Debug.Log("hola");
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, 100f, hitMask);
             if (hit.collider != null)

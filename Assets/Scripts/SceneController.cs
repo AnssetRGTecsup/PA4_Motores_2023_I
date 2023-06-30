@@ -52,7 +52,6 @@ public class SceneController : MonoBehaviour
     }
 
     public IEnumerator LoadSceneCoroutine(){
-        Debug.Log(this.level_to_load);
         AsyncOperation asyncLoadLevel = SceneManager.LoadSceneAsync(this.level_to_load, LoadSceneMode.Single);
 
         while (!asyncLoadLevel.isDone){

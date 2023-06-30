@@ -44,7 +44,6 @@ public class MenuGeneralController : MonoBehaviour
     {
         //Botones para cambiar la intensidad de sonido
         btnMusic.onClick.AddListener(() => ChangeMusic());
-        Debug.Log(btnMusic.GetComponentInChildren<Text>().text);
         btnMusic.GetComponentInChildren<Text>().text = AudioController.instance.MusicMute ? "Off" : "On";
         btnSound.onClick.AddListener(() => ChangeSound());
         btnSound.GetComponentInChildren<Text>().text = AudioController.instance.SoundMute ? "Off" : "On";
